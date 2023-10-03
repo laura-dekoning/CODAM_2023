@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putstr_fd.c                                     :+:    :+:            */
+/*   ft_putendl_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/03 17:01:57 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 17:17:35 by lde-koni      ########   odam.nl         */
+/*   Created: 2023/10/03 17:10:04 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/03 17:17:55 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Outputs the string ’s’ to the given file descriptor. s: The string to output.
-fd: The file desciptor on which to write. Using putchar_fd. */
+/*Outputs the string ’s’ to the given file descriptor followed by a newline.
+So this is basically the same as putstr_fd but with a new line at the end.*/
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void ft_putendl_fd(char *s, int fd)
 {
 	if (!*s || (fd < 0))
 		return;
-	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
 
 // int	main(void)
@@ -35,9 +32,9 @@ void	ft_putstr_fd(char *s, int fd)
 // 	str1 = "Hello\n";
 // 	str2 = "";
 // 	str3 = "Hoi\n";
-// 	ft_putstr_fd(str1, 1);
-// 	ft_putstr_fd(str2, 1);
-// 	ft_putstr_fd(str3, 1);
+// 	ft_putendl_fd(str1, 1);
+// 	ft_putendl_fd(str2, 1);
+// 	ft_putendl_fd(str3, 1);
 
 // 	return (0);
 // }
