@@ -6,7 +6,7 @@
 /*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 15:00:30 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 15:05:34 by lde-koni      ########   odam.nl         */
+/*   Updated: 2023/10/03 15:32:37 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-
-// 	c = '0';
-// 	c = ft_toupper(c);
-// 	printf("%c\n", c);
-// 	return (0);
-// }
