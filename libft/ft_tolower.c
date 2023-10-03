@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalnum.c                                       :+:    :+:            */
+/*   ft_tolower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/03 07:38:43 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 14:54:23 by lde-koni      ########   odam.nl         */
+/*   Created: 2023/10/03 15:05:40 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/03 15:17:49 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	ft_isalnum(int c)
+static bool	ft_isupper(int c)
 {
-	if (ft_isalpha(c) && ft_isdigit(c))
+	if (c >= 'A' && c <= 'Z')
 		return (true);
 	return (false);
 }
+
+int	ft_tolower(int c)
+{
+	if (ft_isupper(c))
+		c += 32;
+	return (c);
+}
+

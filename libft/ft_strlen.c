@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalnum.c                                       :+:    :+:            */
+/*   ft_strlen.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/03 07:38:43 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 14:54:23 by lde-koni      ########   odam.nl         */
+/*   Created: 2023/10/03 14:49:23 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/03 14:53:03 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	ft_isalnum(int c)
+size_t	ft_strlen(const char *str)
 {
-	if (ft_isalpha(c) && ft_isdigit(c))
-		return (true);
-	return (false);
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
