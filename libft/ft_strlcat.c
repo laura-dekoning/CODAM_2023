@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strlcat.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
+/*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 13:06:45 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 14:53:43 by lde-koni      ########   odam.nl         */
+/*   Updated: 2023/10/04 12:27:58 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

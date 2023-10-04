@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_isprint.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
+/*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 07:38:54 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 14:54:03 by lde-koni      ########   odam.nl         */
+/*   Updated: 2023/10/04 12:27:27 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

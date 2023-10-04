@@ -6,7 +6,7 @@
 /*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 17:20:47 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 17:26:06 by lde-koni      ########   odam.nl         */
+/*   Updated: 2023/10/04 12:19:15 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,17 @@ a character which can be written with write.*/
 
 void ft_putnbr_fd(int n, int fd)
 {
-	while (n > 9)
+	if (n < 0)
 	{
-		if (n <= 9)
-			ft_putchar_fd((n + '0'), fd);
+		ft_putchar_fd('-', fd);
+		n = n * -1;
+		ft_putnbr_fd(n, fd);
+	}
+	else if (n <= 9)
+		ft_putchar_fd((n + '0'), fd);
+		
+	else
+		ft_putnbr_fd((n / 10), fd);
+		ft_putnbr_fd((n % 10), fd);
 
 }

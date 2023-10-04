@@ -3,12 +3,13 @@
 /*                                                        ::::::::            */
 /*   ft_isalnum.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
+/*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/03 07:38:43 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/03 14:54:23 by lde-koni      ########   odam.nl         */
+/*   Created: 2023/10/04 12:25:34 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/04 12:27:07 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
