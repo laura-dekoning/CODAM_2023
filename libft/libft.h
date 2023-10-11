@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 07:39:09 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/11 18:30:21 by lde-koni      ########   odam.nl         */
+/*   Updated: 2023/10/11 20:26:18 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,9 @@ void		ft_putnbr_fd(int n, int fd);
 
 
 /*Memory*/
+void		*ft_memset(void *s, int c, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
+void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t count, size_t size);
 
 
