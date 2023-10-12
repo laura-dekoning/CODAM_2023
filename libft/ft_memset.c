@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_memset.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
+/*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/11 18:30:55 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/11 20:23:30 by lde-koni      ########   odam.nl         */
+/*   Updated: 2023/10/12 14:05:20 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ void	*ft_memset(void *s, int c, size_t n)
 
 //     // Compare the results
 //     if (memcmp(str1, str2, 10) == 0) {
-//         printf("Both ft_memset and memset filled the array with 'A' as expected.\n");
+//         printf("Both filled the array with 'A' as expected.\n");
 //     } else {
-//         printf("There is a difference between ft_memset and memset results.\n");
+//         printf("There is a difference between results.\n");
 //     }
 
 //     // Compare the results
@@ -82,7 +82,9 @@ void	*ft_memset(void *s, int c, size_t n)
 //     if (diffIndex == -1) {
 //         printf("Test completed. Same output.\n");
 //     } else {
-//         printf("Difference found at position %d: str1[%d]: '%c' != str2[%d]: '%c'\n", diffIndex, diffIndex, str1[diffIndex], diffIndex, str2[diffIndex]);
+//         printf("Difference found at position %d: str1[%d]: 
+//'%c' != str2[%d]: '%c'\n", diffIndex, diffIndex, str1[diffIndex], 
+//diffIndex, str2[diffIndex]);
 //     }
 
 //     return 0;

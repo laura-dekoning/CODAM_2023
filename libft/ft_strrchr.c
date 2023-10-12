@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 16:27:16 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/04 12:28:07 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/10/12 15:10:27 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	str_len = ft_strlen(s) + 1;
 	while (str_len--)
-		if (s[str_len] == c)
+		if (s[str_len] == (unsigned char)c)
 			return ((char *)(s + str_len));
 	return (NULL);
 }
