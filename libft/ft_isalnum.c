@@ -6,10 +6,9 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/04 12:25:34 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/04 12:27:07 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/10/04 16:18:42 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 

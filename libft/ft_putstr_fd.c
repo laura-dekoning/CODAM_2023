@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 17:01:57 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/04 12:27:43 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/10/04 16:19:06 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ fd: The file desciptor on which to write. Using putchar_fd. */
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s || (fd < 0))
-		return;
+		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);
