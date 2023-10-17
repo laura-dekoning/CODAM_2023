@@ -6,7 +6,7 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/03 12:39:54 by lde-koni      #+#    #+#                  #
-#    Updated: 2023/10/12 14:12:15 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/10/17 21:04:06 by lde-koni      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,9 @@ ft_strncmp.c \
 ft_strrchr.c \
 ft_tolower.c \
 ft_toupper.c \
+ft_memcmp.c \
 
-#  ft_memcmp.c ft_atoi.c  ft_strdup.c \
+#   ft_atoi.c  ft_strdup.c \
 #   ft_strjoin.c ft_substr.c  \
 # ft_strnstr.c ft_strtrim.c ft_striteri.c ft_strmapi.c ft_itoa.c ft_split.c
 
