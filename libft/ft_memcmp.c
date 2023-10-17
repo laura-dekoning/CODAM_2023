@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
+/*   By: lde-koni <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/17 21:03:17 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/17 21:08:47 by lde-koni      ########   odam.nl         */
+/*   Created: 2023/10/17 21:03:17 by lade-kon      #+#    #+#                 */
+/*   Updated: 2023/10/17 21:27:00 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
