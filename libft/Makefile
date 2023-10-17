@@ -6,7 +6,7 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/03 12:39:54 by lde-koni      #+#    #+#                  #
-#    Updated: 2023/10/17 21:47:31 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/10/17 21:55:18 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,11 @@ ft_strmapi.c \
 ft_itoa.c \
 ft_split.c
 
+SRC_BONUS = \
+
+
 OBJ = $(SRC:%.c=obj/%.o)
+OBJ_BONUS = $(SRC_BONUS:%.c=obj/%.o)
 INCLUDE = libft.h
 CFLAGS = -Wall -Werror -Wextra
 CC = cc
@@ -65,6 +69,10 @@ obj/%.o: %.c
 	@echo "${PURPLE} Compiling... ${RESET}"
 	@mkdir -p $(dir $@)
 	@$(CC) -c $(CFLAGS) -o $@ $<
+
+bonus: $(OBJ_BONUS)
+	@ar -rcs $(NAME) $(OBJ_BONUS)
+	@echo "${GREEN} Libft bonus done! ${RESET}"
 
 norminette:
 	@echo "${CYAN}🧐 Checking the Norm...${RESET}"
