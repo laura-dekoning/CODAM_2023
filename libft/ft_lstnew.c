@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/17 21:57:39 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/10/17 22:02:08 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/10/17 22:14:41 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ the value of the parameter ’content’. The variable
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*list;
+	t_list	*new_node;
 
-	list = (t_list *)malloc(sizeof(t_list));
-	if (!list)
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	list->next = NULL;
-	list->content = content;
-	return (list);
+	new_node->next = NULL;
+	new_node->content = content;
+	return (new_node);
 }
