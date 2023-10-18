@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 13:06:45 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/11 14:12:21 by lde-koni      ########   odam.nl         */
+/*   Updated: 2023/10/12 15:54:14 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ problems in incorrect code.*/
 
 #include "libft.h"
 
-int	ft_strlcat(char *dst, const char *src, int dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	dst_len;
-	int	cat;
-	int	i;
+	size_t	dst_len;
+	size_t	cat;
+	size_t	i;
 
 	dst_len = 0;
 	while (dst[dst_len] && dst_len < dstsize)
