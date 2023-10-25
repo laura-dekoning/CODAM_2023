@@ -6,7 +6,7 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/03 12:39:54 by lde-koni      #+#    #+#                  #
-#    Updated: 2023/10/25 14:32:57 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/10/25 16:50:05 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ ft_lstadd_front.c \
 ft_lstsize.c \
 ft_lstlast.c \
 ft_lstadd_back.c \
+# ft_lstdelone.c \
 
 
 # OBJ = $(SRC:%.c=obj/%.o)
