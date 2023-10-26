@@ -6,7 +6,7 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/03 12:39:54 by lde-koni      #+#    #+#                  #
-#    Updated: 2023/10/25 16:50:05 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/10/26 13:46:28 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,13 +48,14 @@ ft_strmapi.c \
 ft_itoa.c \
 ft_split.c
 
-SRC_BONUS = \
-ft_lstnew.c \
-ft_lstadd_front.c \
-ft_lstsize.c \
-ft_lstlast.c \
-ft_lstadd_back.c \
+# SRC_BONUS = \
+# ft_lstnew.c \
+# ft_lstadd_front.c \
+# ft_lstsize.c \
+# ft_lstlast.c \
+# ft_lstadd_back.c \
 # ft_lstdelone.c \
+# ft_lstclear.c \
 
 
 # OBJ = $(SRC:%.c=obj/%.o)
@@ -78,9 +79,9 @@ obj/%.o: %.c
 	@mkdir -p $(dir $@)
 	@$(CC) -c $(CFLAGS) -o $@ $<
 
-bonus: $(OBJ_BONUS)
-	@ar -rcs $(NAME) $(OBJ_BONUS)
-	@echo "${GREEN} Libft bonus done! ${RESET}"
+# bonus: $(OBJ_BONUS)
+# 	@ar -rcs $(NAME) $(OBJ_BONUS)
+# 	@echo "${GREEN} Libft bonus done! ${RESET}"
 
 norminette:
 	@echo "${CYAN}🧐 Checking the Norm...${RESET}"
