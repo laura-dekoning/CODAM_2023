@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 17:20:47 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/04 16:19:51 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/10/30 20:09:01 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@ ft_putchar_fd again. This function uses recursion to convert an integer to
 a character which can be written with write.*/
 
 #include "libft.h"
+#include <limits.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

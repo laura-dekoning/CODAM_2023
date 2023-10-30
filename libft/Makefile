@@ -6,7 +6,7 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/03 12:39:54 by lde-koni      #+#    #+#                  #
-#    Updated: 2023/10/27 11:42:47 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/10/30 20:14:50 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,7 +92,8 @@ norminette:
 
 clean:
 	rm -rf $(OBJ)
-	rm -rf obj
+	
+# rm -rf obj
 
 fclean: clean
 	rm -f $(NAME)
