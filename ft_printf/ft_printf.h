@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/30 13:40:40 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/11/30 13:52:37 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/11/30 14:40:19 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,16 @@
 
 //Printing
 int	print_c(int arg);
+int	print_s(int arg);
+int	print_id(int arg);
+int	print_u(int arg);
+int	print_hex(int arg);
+int	print_p(int arg);
+
+
+//Utils
+int	ft_strlen(char *str);
+int	ft_numlen(int n);
 
 
 #endif

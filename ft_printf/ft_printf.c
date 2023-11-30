@@ -6,16 +6,19 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/30 13:43:25 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/11/30 13:48:05 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/11/30 14:41:38 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_printconversions(char *str, va_list args)
+{
+
+}
 
 
-
-ft_printloop(char *str, va_list args)
+static int	ft_printloop(char *str, va_list args)
 {
 	
 }
