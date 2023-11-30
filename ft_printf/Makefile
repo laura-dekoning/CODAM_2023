@@ -6,13 +6,20 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/11/30 13:41:54 by lade-kon      #+#    #+#                  #
-#    Updated: 2023/11/30 13:42:43 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/11/30 14:00:31 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME =	libftprintf.a
 
-SRC = 
+SRC = 	ft_printf.c \
+		ft_utils \
+		print_c.c \
+		print_s.c \
+		print_id.c \
+		print_u.c \
+		print_hex.c \
+		print_p.c
 
 # OBJ = $(SRC:%.c=obj/%.o)
 OBJ = $(SRC:%.c=%.o)
