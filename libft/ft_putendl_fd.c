@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 17:10:04 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/04 16:19:34 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/11/03 13:58:18 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ So this is basically the same as putstr_fd but with a new line at the end.*/
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s || (fd < 0))
+	if (!s)
 		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);

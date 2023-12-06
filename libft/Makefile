@@ -6,12 +6,11 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/03 12:39:54 by lde-koni      #+#    #+#                  #
-#    Updated: 2023/10/31 20:22:51 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/11/03 14:39:55 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-NAME2 = libft2.a
 
 SRC = \
 ft_bzero.c \
@@ -61,20 +60,20 @@ ft_lstiter_bonus.c \
 ft_lstmap_bonus.c
 
 
-OBJ = $(SRC:%.c=obj/%.o)
-# OBJ = $(SRC:%.c=%.o)
-OBJ_BONUS = $(SRC_BONUS:%.c=obj/%.o)
-# OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
+# OBJ = $(SRC:%.c=obj/%.o)
+OBJ = $(SRC:%.c=%.o)
+# OBJ_BONUS = $(SRC_BONUS:%.c=obj/%.o)
+OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
 INCLUDE = libft.h
 CFLAGS = -Wall -Werror -Wextra
 CC = cc
 MAIN = main.c
 
 
-.PHONY : all clean fclean re bonus
+.PHONY : all clean fclean re
 
 all: $(NAME)
-	@echo "${PURPLE} Compiling... ${RESET}"
+# @echo "${PURPLE} Compiling... ${RESET}"
 
 $(NAME) : $(OBJ) $(INCLUDE)
 	ar -rcs $(NAME) $(OBJ)
@@ -85,7 +84,7 @@ obj/%.o: %.c
 
 bonus: $(NAME) $(OBJ_BONUS) $(OBJ)
 	ar -rcs $(NAME) $(OBJ_BONUS)
-	@echo "${GREEN} Libft bonus done! ${RESET}"
+# @echo "${GREEN} Libft bonus done! ${RESET}"
 
 norminette:
 	@echo "${CYAN}🧐 Checking the Norm...${RESET}"

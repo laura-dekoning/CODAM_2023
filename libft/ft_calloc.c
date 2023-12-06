@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/11 20:28:58 by lde-koni      #+#    #+#                 */
-/*   Updated: 2023/10/25 16:47:15 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/11/03 13:37:02 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_calloc(size_t num_elem, size_t size_elem)
 {
 	void	*ptr;
 
+	if (size_elem != 0 && (num_elem * size_elem) / size_elem != num_elem)
+		return (NULL);
 	ptr = malloc(num_elem * size_elem);
 	if (ptr == NULL)
 		return (NULL);

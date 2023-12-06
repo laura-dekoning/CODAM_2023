@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/17 21:39:12 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/10/17 21:39:36 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/11/03 13:56:36 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static int	ft_numlen(int n)
 char	*ft_itoa(int n)
 {
 	int		count;
+	int		i;
 	char	*s;
 
 	if (n == -2147483648)
@@ -44,7 +45,7 @@ char	*ft_itoa(int n)
 	s = ft_calloc(count + 1, sizeof(char));
 	if (s == NULL)
 		return (NULL);
-	count--;
+	i = count - 1;
 	if (n == 0)
 		s[0] = '0';
 	if (n < 0)
@@ -54,19 +55,9 @@ char	*ft_itoa(int n)
 	}
 	while (n > 0)
 	{
-		s[count--] = n % 10 + '0';
+		s[i] = n % 10 + '0';
 		n = n / 10;
+		i--;
 	}
 	return (s);
 }
-
-// #include <stdio.h>
-// #include <ctype.h>
-// int main()
-// {
-// 	int i;
-
-// 	printf("Enter an integer: ");
-// 	scanf("%i", &i);
-// 	printf("%i converted with itoa: %s\n", i, (ft_itoa(i)));
-// }
