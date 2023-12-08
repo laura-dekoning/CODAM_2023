@@ -6,14 +6,14 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/11/30 13:41:54 by lade-kon      #+#    #+#                  #
-#    Updated: 2023/11/30 14:00:31 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/12/07 14:06:13 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	libftprintf.a
 
 SRC = 	ft_printf.c \
-		ft_utils \
+		ft_utils.c \
 		print_c.c \
 		print_s.c \
 		print_id.c \
@@ -21,10 +21,10 @@ SRC = 	ft_printf.c \
 		print_hex.c \
 		print_p.c
 
-# OBJ = $(SRC:%.c=obj/%.o)
-OBJ = $(SRC:%.c=%.o)
-# OBJ_BONUS = $(SRC_BONUS:%.c=obj/%.o)
-OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
+OBJ = $(SRC:%.c=obj/%.o)
+# OBJ = $(SRC:%.c=%.o)
+OBJ_BONUS = $(SRC_BONUS:%.c=obj/%.o)
+# OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
 INCLUDE = ft_printf.h
 CFLAGS = -Wall -Werror -Wextra
 CC = cc
@@ -42,19 +42,16 @@ obj/%.o: %.c
 	@mkdir -p $(dir $@)
 	@$(CC) -c $(CFLAGS) -o $@ $<
 
-bonus: $(OBJ_BONUS)
-	@ar -rcs $(NAME) $(OBJ_BONUS)
-	@echo "${GREEN} Libft bonus done! ${RESET}"
-
 norminette:
 	@echo "${CYAN}🧐 Checking the Norm...${RESET}"
 	@norminette -R CheckForbiddenSourceHeader
 	@echo "${GREEN} Norm-i-netting complete. Well done!${RESET}" 
 
 clean:
-	rm -rf $(OBJ)
-	
-# rm -rf obj
+	rm -rf obj
+
+# rm -rf $(OBJ)
+
 
 fclean: clean
 	rm -f $(NAME)

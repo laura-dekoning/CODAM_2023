@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/30 13:43:25 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/06 13:57:47 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/12/08 04:04:05 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 
 #include "ft_printf.h"
 
-static int	ft_printconversions(va_list args, char c)
+static unsigned int	ft_printconversions(va_list args, char c)
 {
-	int	len;
-	
+	unsigned int	len;
+
 	len = 0;
 	if (c == 'c')
 		len += print_c(va_arg(args, int));
@@ -48,14 +48,29 @@ static int	ft_printconversions(va_list args, char c)
 	return (len);
 }
 
-
-static int	ft_printloop(char *str, va_list args)
+static unsigned int	ft_printloop(const char *str, va_list args)
 {
-	
+	unsigned int	len;
+	unsigned int	i;
+
+	i = -1;
+	len = 0;
+	while (str[++i] != '\0')
+	{
+		if (str[i] == '%' && str[i + 1] != '\0')
+		{
+			i++;
+			len += ft_printconversions(args, str[i]);
+		}
+		else if (str[i] == '%' && str[i + 1] == '\0')
+			return (len);
+		else
+			len += print_c(str[i]);
+	}
+	return (len);
 }
 
-
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		len;
@@ -66,12 +81,4 @@ int ft_printf(const char *str, ...)
 	len = ft_printloop(str, args);
 	va_end(args);
 	return (len);
-	va_end(args);
-}
-
-
-int	main()
-{
-	ft_printf("");
-	return (0);
 }

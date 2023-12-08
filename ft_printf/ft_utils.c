@@ -6,15 +6,15 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/30 13:58:36 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/11/30 14:39:06 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/12/07 17:54:09 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,11 +22,11 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_numlen(int n)
+unsigned int	ft_numlen(long n)
 {
-	int	len;
+	unsigned int	len;
 
-	len = 0;
+	len = 1;
 	if (n < 0)
 	{
 		n = n * -1;

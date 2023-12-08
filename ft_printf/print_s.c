@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/06 14:00:45 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/12/07 17:55:28 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,19 @@
 
 #include "ft_printf.h"
 
-int	print_s(char *arg)
+unsigned int	print_s(char *arg)
 {
-	int	i;
-	
+	unsigned int	i;
+
 	i = 0;
+	if (!arg)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (arg[i] != '\0')
 	{
-		write(1, &arg[i], 1);
+		print_c(arg[i]);
 		i++;
 	}
 	return (ft_strlen(arg));

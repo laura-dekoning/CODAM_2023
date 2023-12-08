@@ -6,7 +6,7 @@
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/30 13:50:08 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/06 14:00:51 by lade-kon      ########   odam.nl         */
+/*   Updated: 2023/12/07 17:56:22 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 #include "ft_printf.h"
 
-int	print_c(int arg)
+unsigned int	print_c(int arg)
 {
-	write(1, &arg, 1);
-	return (1);
+	return (write(1, &arg, 1));
 }
