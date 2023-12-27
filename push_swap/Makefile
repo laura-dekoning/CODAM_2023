@@ -6,13 +6,16 @@
 #    By: lade-kon <lade-kon@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/12/27 13:00:41 by lade-kon      #+#    #+#                  #
-#    Updated: 2023/12/27 13:55:30 by lade-kon      ########   odam.nl          #
+#    Updated: 2023/12/27 18:55:00 by lade-kon      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC = 
+SRC = \
+push_swap.c \
+input_check.c \
+error.c
 
 
 OBJ = $(SRC:%.c=obj/%.o)
@@ -26,9 +29,9 @@ MAIN = main.c
 
 all: $(NAME)
 
-$(NAME): 
+$(NAME): $(OBJ) $(INCLUDE)
 	@$(MAKE) -C libft
-	
+	$(CC) $(CFLAGS) $(OBJ) libft/libft.a -o $(NAME)
 
 obj/%.o: %.c
 	@mkdir -p $(dir $@)
