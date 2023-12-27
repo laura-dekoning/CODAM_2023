@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   ft_isalnum.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/04 12:25:34 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/12 14:14:00 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+#include "libft.h"
 
-#include "ft_printf.h"
-
-unsigned int	print_s(char *arg)
+bool	ft_isalnum(int c)
 {
-	unsigned int	i;
-
-	i = 0;
-	if (!arg)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
-		i++;
-	}
-	return (ft_strlen(arg));
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (true);
+	return (false);
 }

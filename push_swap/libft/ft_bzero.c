@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_u.c                                          :+:    :+:            */
+/*   ft_bzero.c                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
+/*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/07 11:40:31 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:54 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/11 20:24:10 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/11 20:27:54 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+/*The bzero() function writes n zeroed bytes to the string s. If n is zero, 
+bzero() does nothing.*/
 
-unsigned int	print_u(unsigned int n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	len;
-	unsigned long	i;
-
-	i = n;
-	len = ft_numlen(i);
-	if (i > 9)
-	{
-		print_u(i / 10);
-		print_u(i % 10);
-	}
-	if (i <= 9)
-		print_c(i + '0');
-	return (len);
+	ft_memset(s, '\0', n);
 }

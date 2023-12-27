@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   ft_strlen.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/03 14:49:23 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/04 12:28:03 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+#include "libft.h"
 
-#include "ft_printf.h"
-
-unsigned int	print_s(char *arg)
+size_t	ft_strlen(const char *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	if (!arg)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
+	while (str[i] != '\0')
 		i++;
-	}
-	return (ft_strlen(arg));
+	return (i);
 }

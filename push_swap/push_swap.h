@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_printf.h                                        :+:    :+:            */
+/*   push_swap.h                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/11/30 13:40:40 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:05 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/12/27 13:00:47 by lade-kon      #+#    #+#                 */
+/*   Updated: 2023/12/27 13:07:35 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <unistd.h>
 # include <stdio.h>
@@ -22,18 +22,12 @@
 # include <ctype.h>
 # include <stdarg.h>
 
-int				ft_printf(const char *str, ...);
+typedef struct s_node
+{
+	int		data;
+	int		index;
+	s_node	*next;
+}				t_node;
 
-//Printing
-unsigned int	print_c(int arg);
-unsigned int	print_s(char *arg);
-unsigned int	print_id(int arg);
-unsigned int	print_u(unsigned int arg);
-unsigned int	print_hex(unsigned int arg, char *hex);
-unsigned int	print_p(unsigned long arg, char *hex);
-
-//Utils
-unsigned int	ft_strlen(char *str);
-unsigned int	ft_numlen(long n);
 
 #endif

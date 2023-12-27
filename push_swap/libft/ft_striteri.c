@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   ft_striteri.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/17 21:43:00 by lade-kon      #+#    #+#                 */
+/*   Updated: 2023/10/17 21:43:19 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+/*Applies the function ’f’ on each character of
+the string passed as argument, passing its index
+as first argument.  Each character is passed by
+address to ’f’ to be modified if necessary.*/
 
-#include "ft_printf.h"
+#include "libft.h"
 
-unsigned int	print_s(char *arg)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	if (!arg)
+	while (s[i])
 	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
+		f(i, &s[i]);
 		i++;
 	}
-	return (ft_strlen(arg));
 }

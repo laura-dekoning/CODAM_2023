@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   ft_toupper.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/03 15:00:30 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/04 12:28:17 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+#include "libft.h"
 
-#include "ft_printf.h"
-
-unsigned int	print_s(char *arg)
+static bool	ft_islower(int c)
 {
-	unsigned int	i;
+	if (c >= 'a' && c <= 'z')
+		return (true);
+	return (false);
+}
 
-	i = 0;
-	if (!arg)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
-		i++;
-	}
-	return (ft_strlen(arg));
+int	ft_toupper(int c)
+{
+	if (ft_islower(c))
+		c -= 32;
+	return (c);
 }

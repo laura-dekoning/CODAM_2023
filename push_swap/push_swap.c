@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   push_swap.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/12/27 13:00:45 by lade-kon      #+#    #+#                 */
+/*   Updated: 2023/12/27 14:53:52 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+#include "push_swap.h"
 
-#include "ft_printf.h"
-
-unsigned int	print_s(char *arg)
+int	main(int argc, char **argv)
 {
-	unsigned int	i;
+	if (argc < 2 || argv[1][0] == '\0')
+		return (1);
 
-	i = 0;
-	if (!arg)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
-		i++;
-	}
-	return (ft_strlen(arg));
+	return (0);
 }

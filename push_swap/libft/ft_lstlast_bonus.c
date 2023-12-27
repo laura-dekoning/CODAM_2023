@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   ft_lstlast.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/25 14:12:28 by lade-kon      #+#    #+#                 */
+/*   Updated: 2023/10/25 14:14:07 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+#include "libft.h"
 
-#include "ft_printf.h"
-
-unsigned int	print_s(char *arg)
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned int	i;
+	t_list	*current_node;
 
-	i = 0;
-	if (!arg)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
-		i++;
-	}
-	return (ft_strlen(arg));
+	current_node = lst;
+	if (current_node == NULL)
+		return (NULL);
+	while (current_node->next != NULL)
+		current_node = current_node->next;
+	return (current_node);
 }

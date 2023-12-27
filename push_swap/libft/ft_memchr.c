@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_u.c                                          :+:    :+:            */
+/*   ft_memchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
+/*   By: lde-koni <lde-koni@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/07 11:40:31 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:54 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/11 14:28:22 by lde-koni      #+#    #+#                 */
+/*   Updated: 2023/10/11 14:28:40 by lde-koni      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-unsigned int	print_u(unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	len;
-	unsigned long	i;
+	size_t			i;
+	unsigned char	*sptr;
 
-	i = n;
-	len = ft_numlen(i);
-	if (i > 9)
+	sptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
 	{
-		print_u(i / 10);
-		print_u(i % 10);
+		if (sptr[i] == (unsigned char)c)
+			return (&sptr[i]);
+		else
+			i++;
 	}
-	if (i <= 9)
-		print_c(i + '0');
-	return (len);
+	return (NULL);
 }

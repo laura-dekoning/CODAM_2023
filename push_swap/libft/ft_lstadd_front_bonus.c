@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   ft_lstadd_front.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/17 22:03:05 by lade-kon      #+#    #+#                 */
+/*   Updated: 2023/10/25 13:52:13 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+/*Adds the node ’new’ at the beginning of the list.
+lst: The address of a pointer to the first link of a list.
+new: The address of a pointer to the node to be added to the list.*/
 
-#include "ft_printf.h"
+#include "libft.h"
 
-unsigned int	print_s(char *arg)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned int	i;
-
-	i = 0;
-	if (!arg)
+	if (new != NULL)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		new->next = *lst;
+		*lst = new;
 	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
-		i++;
-	}
-	return (ft_strlen(arg));
 }

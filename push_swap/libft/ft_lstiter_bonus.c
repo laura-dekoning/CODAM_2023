@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   print_s.c                                          :+:    :+:            */
+/*   ft_lstiter_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lade-kon <lade-kon@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/12/06 13:47:52 by lade-kon      #+#    #+#                 */
-/*   Updated: 2023/12/13 13:54:43 by lade-kon      ########   odam.nl         */
+/*   Created: 2023/10/27 11:35:23 by lade-kon      #+#    #+#                 */
+/*   Updated: 2023/10/27 11:41:05 by lade-kon      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function will use write to print an entire string and it will return
-// the string length. 
+/*Iterates the list ’lst’ and applies the function 
+’f’ on the content of each node.
 
-#include "ft_printf.h"
+lst: The address of a pointer to a node.
+f: The address of the function used to iterate on the list.*/
 
-unsigned int	print_s(char *arg)
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned int	i;
+	t_list	*node;
 
-	i = 0;
-	if (!arg)
+	node = lst;
+	while (node)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		(*f)(node->content);
+		node = node->next;
 	}
-	while (arg[i] != '\0')
-	{
-		print_c(arg[i]);
-		i++;
-	}
-	return (ft_strlen(arg));
 }
